@@ -7,7 +7,7 @@ import '../../assets/css/animate.min.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
  
-class NavigationFour extends React.Component {
+class NavigationFour extends React.Component { 
     render(){
         let pathName = window.location.pathname;
         return (
@@ -96,7 +96,7 @@ class NavigationFour extends React.Component {
                     <div className="uk-container">
                         <div className="uk-navbar">
                             <div className="logo uk-navbar-left">
-                                <a href="/home-four">
+                                <a href="/">
                                     <img src={require("../../assets/images/logo2.png")} alt="logo" />
                                 </a>
                             </div>
@@ -111,10 +111,10 @@ class NavigationFour extends React.Component {
                                 <nav className="uk-navbar-container">
                                     <ul className="uk-navbar-nav">
                                         <li 
-                                            className={pathName === '/home-four' || pathName === '/home-five' || pathName === '/home-six' || pathName === '/home-seven' ? 'uk-active' : ''}
+                                            className={pathName === '/' ? 'uk-active' : ''}
                                         >
-                                            <Link to="#">Home</Link>
-                                            <div uk-dropdown="true">
+                                            <Link to="/">Home</Link>
+                                            {/* <div uk-dropdown="true">
                                                 <ul className="uk-nav uk-dropdown-nav">
                                                     <li className={pathName === '/home-four' ? 'uk-active' : ''}>
                                                         <Link 
@@ -145,7 +145,7 @@ class NavigationFour extends React.Component {
                                                         </Link>
                                                     </li>
                                                 </ul>
-                                            </div>
+                                            </div> */}
                                         </li>
                                         <li className={pathName === '/about' ? 'uk-active' : ''}>
                                             <Link to="/about">About</Link>
@@ -211,7 +211,6 @@ class NavigationFour extends React.Component {
                                         <div>
                                             <select>
                                                 <option value="eng">En</option>
-                                                <option value="ge">Ge</option>
                                             </select>
                                         </div>
                                     </form>
