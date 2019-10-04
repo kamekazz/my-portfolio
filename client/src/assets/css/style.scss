@@ -1100,15 +1100,11 @@ About CSS
     bottom: -82px;
   }
   .shape-img {
-    filter: hue-rotate(170deg) grayscale(0%);
     position: absolute;
-    filter: hue-rotate(170deg) grayscale(0%);
     animation: moveleftbounce 3s linear infinite;
-    filter: hue-rotate(170deg) grayscale(0%);
     left: 44%;
-    filter: hue-rotate(170deg) grayscale(0%);
     top: 9%;
-    filter: hue-rotate(170deg) grayscale(0%);
+    filter: saturate(0.5) brightness(190%) hue-rotate(157deg);
   }
   .uk-button {
     background-color: $main-color;
