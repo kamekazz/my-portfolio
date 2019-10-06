@@ -56,8 +56,8 @@ $font-size: 15px;
   
   /* Track */
   ::-webkit-scrollBar-track {
-    box-shadow: inset 0 0 5px $paragraph-color; 
-    background: $paragraph-color2; 
+    box-shadow: inset 0 0 5px $sub-black-color; 
+    background: $black-color; 
   }
   /* Handle */
   ::-webkit-scrollBar-thumb {

@@ -1,18 +1,19 @@
-import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Preloader from './components/Common/Preloader';
-import Home from './components/Pages/HomeFour';
-import About from './components/Pages/About';
-import Services from './components/Pages/Services';
-import ServicesTwo from './components/Pages/ServicesTwo';
-import ServiceDetails from './components/Pages/ServiceDetails';
-import Project from './components/Pages/Project';
-import ProjectDetails from './components/Pages/ProjectDetails';
-import BlogDetails from './components/Pages/BlogDetails';
-import Testimonials from './components/Pages/Testimonials';
-import Team from './components/Pages/Team';
-import Blog from './components/Pages/Blog';
-import Contact from './components/Pages/Contact';
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Preloader from "./components/Common/Preloader";
+import Home from "./components/Pages/HomeFour";
+import About from "./components/Pages/About";
+import Services from "./components/Pages/Services";
+import ServicesTwo from "./components/Pages/ServicesTwo";
+import ServiceDetails from "./components/Pages/ServiceDetails";
+import Project from "./components/Pages/Project";
+import ProjectDetails from "./components/Pages/ProjectDetails";
+import BlogDetails from "./components/Pages/BlogDetails";
+import Testimonials from "./components/Pages/Testimonials";
+import Team from "./components/Pages/Team";
+import Blog from "./components/Pages/Blog";
+import Contact from "./components/Pages/Contact";
+import NavigationFour from "./components/Navigation/NavigationFour";
 
 class App extends React.Component {
   state = {
@@ -29,23 +30,26 @@ class App extends React.Component {
 
   render() {
     return (
-      <Router>
-        <React.Fragment>
-          {this.state.loading ? <Preloader /> : ''}
-          <Route path='/' exact component={Home} />
-          <Route path='/about' exact component={About} />
-          <Route path='/services' exact component={Services} />
-          <Route path='/services-two' exact component={ServicesTwo} />
-          <Route path='/service-details' exact component={ServiceDetails} />
-          <Route path='/projects' exact component={Project} />
-          <Route path='/project-details' exact component={ProjectDetails} />
-          <Route path='/blog-details' exact component={BlogDetails} />
-          <Route path='/testimonials' exact component={Testimonials} />
-          <Route path='/team' exact component={Team} />
-          <Route path='/blog' exact component={Blog} />
-          <Route path='/contact' exact component={Contact} />
-        </React.Fragment>
-      </Router>
+      <>
+        <Router>
+          <React.Fragment>
+            {this.state.loading ? <Preloader /> : ""}
+            <NavigationFour />
+            <Route path="/" exact component={Home} />
+            <Route path="/about" exact component={About} />
+            <Route path="/services" exact component={Services} />
+            <Route path="/services-two" exact component={ServicesTwo} />
+            <Route path="/service-details" exact component={ServiceDetails} />
+            <Route path="/projects" exact component={Project} />
+            <Route path="/project-details" exact component={ProjectDetails} />
+            <Route path="/blog-details" exact component={BlogDetails} />
+            <Route path="/testimonials" exact component={Testimonials} />
+            <Route path="/team" exact component={Team} />
+            <Route path="/blog" exact component={Blog} />
+            <Route path="/contact" exact component={Contact} />
+          </React.Fragment>
+        </Router>
+      </>
     );
   }
 }
