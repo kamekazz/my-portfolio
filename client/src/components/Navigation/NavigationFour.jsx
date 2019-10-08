@@ -3,8 +3,8 @@ import "../../assets/css/style.scss";
 import "../../assets/css/responsive.scss";
 import "../../assets/css/flaticon.css";
 import "../../assets/css/animate.min.css";
-
-import React, { useEffect } from "react";
+import Logo from "../Logo/Logo";
+import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
 function NavigationFour() {
@@ -128,12 +128,7 @@ function NavigationFour() {
         <div className="uk-container">
           <div className="uk-navbar">
             <div className="logo uk-navbar-left">
-              <a href="/">
-                <img
-                  src={require("../../assets/images/logo2.png")}
-                  alt="logo"
-                />
-              </a>
+              <Logo />
             </div>
 
             <div

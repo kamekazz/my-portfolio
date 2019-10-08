@@ -33,7 +33,7 @@ class App extends React.Component {
       <>
         <Router>
           <React.Fragment>
-            {this.state.loading ? <Preloader /> : ""}
+            {/* {this.state.loading ? <Preloader /> : ""} */}
             <NavigationFour />
             <Route path="/" exact component={Home} />
             <Route path="/about" exact component={About} />
