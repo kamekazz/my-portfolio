@@ -3,14 +3,12 @@ import styled from "styled-components";
 import { useSpring, animated } from "react-spring";
 
 const LogoDivEl = styled(animated.div)`
-  /* position: relative; */
   height: 41px;
   width: 270px;
   overflow: hidden;
 `;
 
 const TestEl = styled.h2`
-  /* position: absolute; */
   margin: 0px;
   font-weight: 800;
   cursor: pointer;
