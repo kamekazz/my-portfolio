@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useSpring, animated } from "react-spring";
 
@@ -26,10 +26,17 @@ const NameEl = styled(animated.span)``;
 const LastEl = styled(animated.span)``;
 
 const Logo = () => {
-  const [isToggle, setIsToggle] = useState(true);
-  const [isAnimated, setIsAnimate] = useState(false);
+  const [isAnimated, setIsAnimate] = useState(true);
   const fade = useSpring({
-    opacity: isToggle ? 1 : 0
+    from: {
+      opacity: 0
+    },
+    to: {
+      opacity: 1
+    },
+    config: {
+      mass: 28
+    }
   });
   const sparedAnimation = useSpring({
     opacity: isAnimated ? 1 : 0,
@@ -38,6 +45,13 @@ const Logo = () => {
   const animationForT = useSpring({
     color: isAnimated ? "#61dafb" : "white"
   });
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsAnimate(false);
+    }, 2000);
+  }, []);
+
   return (
     <LogoDivEl style={fade}>
       <TestEl

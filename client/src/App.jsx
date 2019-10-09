@@ -14,14 +14,13 @@ import Team from "./components/Pages/Team";
 import Blog from "./components/Pages/Blog";
 import Contact from "./components/Pages/Contact";
 import NavigationFour from "./components/Navigation/NavigationFour";
+import { acLoadingPage } from "./redux/Tools/actions";
+
+import { connect } from "react-redux";
 
 class App extends React.Component {
-  state = {
-    loading: true
-  };
-
   componentDidMount() {
-    this.demoAsyncCall().then(() => this.setState({ loading: false }));
+    this.demoAsyncCall().then(() => this.props.acLoadingPage(false));
   }
 
   demoAsyncCall = () => {
@@ -29,12 +28,13 @@ class App extends React.Component {
   };
 
   render() {
+    console.log(this.props.loading);
+
     return (
       <>
         <Router>
           <React.Fragment>
-            {/* {this.state.loading ? <Preloader /> : ""} */}
-            <NavigationFour />
+            {this.props.loading ? <Preloader /> : <NavigationFour />}
             <Route path="/" exact component={Home} />
             <Route path="/about" exact component={About} />
             <Route path="/services" exact component={Services} />
@@ -54,4 +54,13 @@ class App extends React.Component {
   }
 }
 
-export default App;
+const mapStateToProps = state => ({
+  loading: state.tools.loading
+});
+
+const mapDispatchToProps = { acLoadingPage };
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);
