@@ -8,11 +8,9 @@ const CirceEl = styled(animated.img)`
   position: absolute;
   right: 0;
   bottom: 20px;
-  z-index: 1;
+  cursor: pointer;
 `;
-const TittleEl = styled.h2`
-  z-index: 2;
-`;
+const TittleEl = styled.h2``;
 
 const AboutContent = () => {
   const [{ xy }, set] = useSpring(() => ({ xy: [0, 0] }));
@@ -38,7 +36,6 @@ const AboutContent = () => {
                   }}
                   {...bind()}
                   src={require("../../assets/images/1.png")}
-                  // className="shape-img"
                   alt="shape"
                 />
                 <div className="bar"></div>
