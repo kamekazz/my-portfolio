@@ -2,15 +2,27 @@ import React, { useState } from "react";
 import { useGesture } from "react-with-gesture";
 import styled from "styled-components";
 import { animated, useSpring } from "react-spring";
+import Signature from "./Signature";
+import AboutImgOne from "./AboutImgOne";
 
 const CirceEl = styled(animated.img)`
   filter: saturate(0.5) brightness(190%) hue-rotate(157deg);
   position: absolute;
   right: 0;
   bottom: 20px;
-  cursor: pointer;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 const TittleEl = styled.h2``;
+
+const calc = (x, y) => [
+  -(y - window.innerHeight / 2) / 20,
+  (x - window.innerWidth / 2) / 20,
+  1.1
+];
+const trans = (x, y, s) =>
+  `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
 const AboutContent = () => {
   const [{ xy }, set] = useSpring(() => ({ xy: [0, 0] }));
@@ -62,12 +74,11 @@ const AboutContent = () => {
                   for you!!
                 </p>
 
-                <div className="signature">
-                  <img
+                {/* <img
                     src={require("../../assets/images/signature.png")}
                     alt="signature"
-                  />
-                </div>
+                  /> */}
+                <Signature />
               </div>
             </div>
           </div>
@@ -79,11 +90,12 @@ const AboutContent = () => {
                 className="about-img1"
                 alt="about-img"
               />
-              <img
+              <AboutImgOne />
+              {/* <img
                 src={require("../../assets/images/about2.jpg")}
                 className="about-img2"
                 alt="about-img"
-              />
+              /> */}
             </div>
           </div>
         </div>
