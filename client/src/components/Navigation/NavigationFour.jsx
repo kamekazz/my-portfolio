@@ -286,16 +286,6 @@ function NavigationFour() {
                   </li>
                 </ul>
               </nav>
-
-              <div className="lang">
-                <form>
-                  <div>
-                    <select>
-                      <option value="eng">En</option>
-                    </select>
-                  </div>
-                </form>
-              </div>
             </div>
           </div>
         </div>

@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { animated, useSpring } from "react-spring";
 import Signature from "./Signature";
 import AboutImgOne from "./AboutImgOne";
+import one from "../../assets/images/1.png";
 
 const CirceEl = styled(animated.img)`
   filter: saturate(0.5) brightness(190%) hue-rotate(157deg);
@@ -12,6 +13,26 @@ const CirceEl = styled(animated.img)`
   bottom: 20px;
   &:hover {
     cursor: pointer;
+  }
+  @media (max-width: 1200px) {
+    right: -125px;
+    bottom: 20px;
+  }
+  @media (max-width: 1200px) {
+    right: 33px;
+    bottom: -62px;
+  }
+  @media (max-width: 1100px) {
+    right: -101px;
+    bottom: 72px;
+  }
+  @media (max-width: 900px) {
+    right: 33px;
+    bottom: -62px;
+    opacity: 0.5;
+  }
+  @media (max-width: 400px) {
+    display: none;
   }
 `;
 const TittleEl = styled.h2``;
@@ -88,6 +109,7 @@ const AboutContent = () => {
                 className="about-img2"
                 alt="about-img"
               /> */}
+              <img src={one} className="shape-img" alt="shape" />
             </div>
           </div>
         </div>

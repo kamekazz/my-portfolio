@@ -43,7 +43,7 @@ const Logo = () => {
     fontSize: isAnimated ? "25px" : "0px"
   });
   const animationForT = useSpring({
-    color: isAnimated ? "#61dafb" : "white"
+    color: isAnimated ? "#61dafb" : "#ff4800"
   });
 
   useEffect(() => {
@@ -52,11 +52,16 @@ const Logo = () => {
     }, 2000);
   }, []);
 
+  const onHover = () => {
+    setTimeout(() => {
+      setIsAnimate(false);
+    }, 2000);
+  };
   return (
     <LogoDivEl style={fade}>
       <TestEl
         onMouseEnter={() => setIsAnimate(true)}
-        onMouseLeave={() => setIsAnimate(false)}
+        onMouseLeave={() => onHover()}
       >
         <MEl>M</MEl>
         <NameEl style={sparedAnimation}>anuel</NameEl>
