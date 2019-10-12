@@ -238,7 +238,7 @@ a {
       height: 100%;
       width: 3px;
       top: 0;
-      background: $white-color;
+      background: black;
       transition: $transition;
       animation-duration: 3s;
       animation-timing-function: linear;
@@ -3720,7 +3720,7 @@ Dark Home CSS
     &.active,
     &:focus,
     &:hover {
-      background-color: $main-color;
+      background-color: $main-color2;
 
       .bar {
         &::before,
