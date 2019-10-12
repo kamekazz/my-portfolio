@@ -36,6 +36,17 @@ const CirceEl = styled(animated.img)`
   }
 `;
 const TittleEl = styled.h2``;
+const SectionEl = styled.section`
+  background-color: black;
+  .tittleEl {
+    color: whitesmoke;
+  }
+  .about-text {
+    p {
+      color: whitesmoke;
+    }
+  }
+`;
 
 const AboutContent = () => {
   const [{ xy }, set] = useSpring(() => ({ xy: [0, 0] }));
@@ -45,14 +56,16 @@ const AboutContent = () => {
   });
 
   return (
-    <section className="uk-about about-area uk-section">
+    <SectionEl className="uk-about about-area uk-section">
       <div className="uk-container">
         <div className="uk-grid uk-grid-match uk-grid-medium uk-child-width-1-2@m uk-child-width-1-1@s">
           <div className="item">
             <div className="about-content">
               <div className="uk-section-title section-title">
                 <span>About Me</span>
-                <TittleEl>Leading the way in Digital Solutions</TittleEl>
+                <TittleEl className="tittleEl">
+                  Leading the way in Digital Solutions
+                </TittleEl>
                 <CirceEl
                   style={{
                     transform: xy.interpolate(
@@ -114,7 +127,7 @@ const AboutContent = () => {
           </div>
         </div>
       </div>
-    </section>
+    </SectionEl>
   );
 };
 

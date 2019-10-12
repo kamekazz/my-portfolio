@@ -2,7 +2,7 @@ import React from "react";
 import Banner from "../HomeFour/Banner";
 import FeaturesTwo from "../HomeFour/FeaturesTwo";
 import SeperatedBar from "../Common/SeperatedBar";
-import About from "../HomeFour/About";
+import About from "../About/AboutContent";
 import Services from "../HomeFour/Services";
 import Project from "../HomeFour/Project";
 import Testimonials from "../HomeFour/Testimonials";
@@ -24,7 +24,7 @@ class Home extends React.Component {
         {/* Vertical line */}
         <SeperatedBar />
         {/* About Area */}
-        <About />
+        <About Drake={true} />
         {/* Vertical line */}
         <SeperatedBar />
         {/* Services Area */}
