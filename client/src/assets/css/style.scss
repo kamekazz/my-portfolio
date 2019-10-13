@@ -1209,7 +1209,7 @@ Services CSS
   &:hover,
   &:focus,
   &.active {
-    background: $main-color;
+    background: $main-color2;
 
     h3,
     a {
@@ -3754,7 +3754,7 @@ Dark Home CSS
     &.active,
     &:focus,
     &:hover {
-      background-color: $main-color;
+      background-color: $main-color2;
 
       .icon {
         background-color: $white-color;

@@ -45,6 +45,9 @@ const SectionEl = styled.section`
     p {
       color: whitesmoke;
     }
+    h3 {
+      color: #61dafb;
+    }
   }
 `;
 
