@@ -36,9 +36,9 @@ class Home extends React.Component {
         {/* Vertical line */}
         <SeperatedBar />
         {/* Feedback Area */}
-        <Testimonials />
+        {/* <Testimonials /> */}
         {/* Partner Area */}
-        <PartnerLogo />
+        {/* <PartnerLogo /> */}
         {/* Team Area */}
         <Team />
         {/* Subscribe Area */}
