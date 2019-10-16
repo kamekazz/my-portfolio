@@ -10,7 +10,7 @@ class Services extends React.Component {
       >
         <div className="uk-container">
           <div className="uk-section-title section-title">
-            <span>What I Do</span>
+            <span>What can i build ?</span>
             <h2>My Services</h2>
             <div className="bar"></div>
           </div>
@@ -21,7 +21,7 @@ class Services extends React.Component {
                 <div className="icon">
                   <i className="flaticon-plan"></i>
                 </div>
-                <h3>Launching Website</h3>
+                <h3>Custom CMD</h3>
 
                 <i className="flaticon-right link-btn"></i>
 
@@ -112,7 +112,7 @@ class Services extends React.Component {
                 <div className="icon">
                   <i className="flaticon-camera"></i>
                 </div>
-                <h3>Photography</h3>
+                <h3>Single Page Application</h3>
 
                 <i className="flaticon-right link-btn"></i>
 
@@ -125,7 +125,7 @@ class Services extends React.Component {
                 <div className="icon">
                   <i className="flaticon-chat"></i>
                 </div>
-                <h3>Social Media</h3>
+                <h3>Mern Stack</h3>
 
                 <i className="flaticon-right link-btn"></i>
 

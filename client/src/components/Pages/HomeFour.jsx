@@ -40,11 +40,11 @@ class Home extends React.Component {
         {/* Partner Area */}
         {/* <PartnerLogo /> */}
         {/* Team Area */}
-        <Team />
+        {/* <Team /> */}
         {/* Subscribe Area */}
-        <Newsletter />
+        {/* <Newsletter /> */}
         {/* Blog Area */}
-        <LatestNews />
+        {/* <LatestNews /> */}
         {/* Vertical line */}
         <SeperatedBar />
         {/* Contact Area */}

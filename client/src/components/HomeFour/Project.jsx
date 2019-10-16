@@ -39,7 +39,7 @@ class Project extends React.Component {
       >
         <div className="uk-container">
           <div className="uk-section-title section-title">
-            <span>Our Completed Projects</span>
+            <span>My Projects</span>
             <h2>Recent Projects</h2>
             <div className="bar"></div>
 
@@ -54,7 +54,7 @@ class Project extends React.Component {
           {...options}
         >
           {projects.map(project => (
-            <div className="single-project">
+            <div key={project.img} className="single-project">
               <Link to="#" className="project-img">
                 <img
                   src={project.img}

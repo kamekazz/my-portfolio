@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { useSpring, animated } from "react-spring";
+import { useSpring, animated, config } from "react-spring";
 
 const LogoDivEl = styled(animated.div)`
   height: 41px;
@@ -40,10 +40,12 @@ const Logo = () => {
   });
   const sparedAnimation = useSpring({
     opacity: isAnimated ? 1 : 0,
-    fontSize: isAnimated ? "25px" : "0px"
+    fontSize: isAnimated ? "25px" : "0px",
+    config: config.wobbly
   });
   const animationForT = useSpring({
-    color: isAnimated ? "#61dafb" : "#ff4800"
+    color: isAnimated ? "#61dafb" : "#ff4800",
+    config: config.molasses
   });
 
   useEffect(() => {
