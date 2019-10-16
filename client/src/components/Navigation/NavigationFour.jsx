@@ -196,7 +196,7 @@ function NavigationFour() {
                     }
                   >
                     <Link to="#">Services</Link>
-                    <div uk-dropdown="true">
+                    {/* <div uk-dropdown="true">
                       <ul className="uk-nav uk-dropdown-nav">
                         <li
                           className={
@@ -220,7 +220,7 @@ function NavigationFour() {
                           <Link to="/service-details">Single Services</Link>
                         </li>
                       </ul>
-                    </div>
+                    </div> */}
                   </li>
                   <li
                     className={
@@ -231,7 +231,7 @@ function NavigationFour() {
                     }
                   >
                     <Link to="#">Project</Link>
-                    <div uk-dropdown="true">
+                    {/* <div uk-dropdown="true">
                       <ul className="uk-nav uk-dropdown-nav">
                         <li
                           className={
@@ -248,17 +248,17 @@ function NavigationFour() {
                           <Link to="/project-details">Single Project</Link>
                         </li>
                       </ul>
-                    </div>
+                    </div> */}
                   </li>
-                  <li
+                  {/* <li
                     className={pathName === "/testimonials" ? "uk-active" : ""}
                   >
                     <Link to="/testimonials">Testimonials</Link>
-                  </li>
-                  <li className={pathName === "/team" ? "uk-active" : ""}>
+                  </li> */}
+                  {/* <li className={pathName === "/team" ? "uk-active" : ""}>
                     <Link to="/team">Team</Link>
-                  </li>
-                  <li
+                  </li> */}
+                  {/* <li
                     className={
                       pathName === "/blog" || pathName === "/blog-details"
                         ? "uk-active"
@@ -280,7 +280,7 @@ function NavigationFour() {
                         </li>
                       </ul>
                     </div>
-                  </li>
+                  </li> */}
                   <li className={pathName === "/contact" ? "uk-active" : ""}>
                     <Link to="/contact">Contact</Link>
                   </li>

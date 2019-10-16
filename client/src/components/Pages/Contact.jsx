@@ -1,8 +1,8 @@
-import React from 'react';
-import NavigationFour from '../Navigation/NavigationFour';
-import Footer from '../Common/Footer';
-import Banner from '../Contact/Banner';
-import Contact from '../Contact/Contact';
+import React from "react";
+import NavigationFour from "../Navigation/NavigationFour";
+import Footer from "../Common/Footer";
+import Banner from "../Contact/Banner";
+import Contact from "../Contact/Contact";
 
 class ContactUs extends React.Component {
   render() {

@@ -2762,6 +2762,12 @@ Contact CSS
   position: relative;
   z-index: 1;
 
+  #mapone{
+    filter: brightness(200%) contrast(200%) hue-rotate(175deg);
+    // display: none;
+    transform: scaleX(-1);
+  }
+
   .location {
     position: absolute;
     left: 24%;
@@ -2772,7 +2778,7 @@ Contact CSS
     a {
       width: 14px;
       height: 14px;
-      background: $main-color;
+      background: $main-color2;
       border-radius: 50%;
       position: relative;
 
@@ -2844,11 +2850,12 @@ Contact CSS
       }
     }
     &.uk-location2 {
-      right: 22%;
-      left: auto;
-      top: 25%;
+      left: 25%;
+      right: auto;
+      top: 40%;
     }
   }
+
 }
 #contactForm {
   .uk-grid-medium {
@@ -2886,7 +2893,7 @@ Contact CSS
     }
   }
   .uk-button {
-    background-color: $main-color;
+    background-color: $main-color2;
     color: $white-color;
     margin-top: 20px;
 
