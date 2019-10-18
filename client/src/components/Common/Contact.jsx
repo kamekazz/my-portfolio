@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "isomorphic-fetch";
 import mapImg from "../../assets/images/map2.png";
-import styled from "styled-components";
 
 class Contact extends React.Component {
   state = {

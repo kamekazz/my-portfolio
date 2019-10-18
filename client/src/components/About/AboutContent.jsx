@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useGesture } from "react-with-gesture";
 import styled from "styled-components";
 import { animated, useSpring } from "react-spring";
@@ -59,7 +59,7 @@ const AboutContent = () => {
   });
 
   return (
-    <SectionEl className="uk-about about-area uk-section">
+    <SectionEl id="about" className="uk-about about-area uk-section">
       <div className="uk-container">
         <div className="uk-grid uk-grid-match uk-grid-medium uk-child-width-1-2@m uk-child-width-1-1@s">
           <div className="item">

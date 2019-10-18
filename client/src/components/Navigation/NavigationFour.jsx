@@ -6,6 +6,7 @@ import "../../assets/css/animate.min.css";
 import Logo from "../Logo/Logo";
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 function NavigationFour() {
   let pathName = window.location.pathname;
@@ -36,83 +37,19 @@ function NavigationFour() {
                     : ""
                 }
               >
-                <Link to="#">Home</Link>
-                <div uk-dropdown="mode: click">
-                  <ul className="uk-nav uk-dropdown-nav">
-                    <li
-                      className={pathName === "/home-four" ? "uk-active" : ""}
-                    >
-                      <Link to="/home-four">Home Four</Link>
-                    </li>
-                    <li
-                      className={pathName === "/home-five" ? "uk-active" : ""}
-                    >
-                      <Link to="/home-five">Home Five</Link>
-                    </li>
-                    <li className={pathName === "/home-six" ? "uk-active" : ""}>
-                      <Link to="/home-six">Home Six</Link>
-                    </li>
-                    <li
-                      className={pathName === "/home-seven" ? "uk-active" : ""}
-                    >
-                      <Link to="/home-seven">Home Seven</Link>
-                    </li>
-                  </ul>
-                </div>
+                <AnchorLink href="#home">Home</AnchorLink>
               </li>
               <li>
-                <Link to="/about">About</Link>
+                <AnchorLink href="#about">About</AnchorLink>
               </li>
               <li>
-                <Link to="#">Services</Link>
-                <div uk-dropdown="mode: click">
-                  <ul className="uk-nav uk-dropdown-nav">
-                    <li>
-                      <Link to="/services">Services One</Link>
-                    </li>
-                    <li>
-                      <Link to="/services-two">Services Two</Link>
-                    </li>
-                    <li>
-                      <Link to="/service-details">Single Services</Link>
-                    </li>
-                  </ul>
-                </div>
+                <AnchorLink href="#services">Services</AnchorLink>
               </li>
               <li>
-                <Link to="#">Project</Link>
-                <div uk-dropdown="mode: click">
-                  <ul className="uk-nav uk-dropdown-nav">
-                    <li>
-                      <Link to="/projects">Project</Link>
-                    </li>
-                    <li>
-                      <Link to="/project-details">Single Project</Link>
-                    </li>
-                  </ul>
-                </div>
+                <AnchorLink href="#project">Project</AnchorLink>
               </li>
               <li>
-                <Link to="/testimonials">Testimonials</Link>
-              </li>
-              <li>
-                <Link to="/team">Team</Link>
-              </li>
-              <li>
-                <Link to="#">Blog</Link>
-                <div uk-dropdown="mode: click">
-                  <ul className="uk-nav uk-dropdown-nav">
-                    <li>
-                      <Link to="/blog">Blog</Link>
-                    </li>
-                    <li>
-                      <Link to="/blog-details">Single Blog</Link>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li>
-                <Link to="/contact">Contact</Link>
+                <AnchorLink href="#contact">Contact</AnchorLink>
               </li>
             </ul>
           </nav>
@@ -145,9 +82,7 @@ function NavigationFour() {
               <nav className="uk-navbar-container">
                 <ul className="uk-navbar-nav">
                   <li>
-                    <NavLink exact to="/">
-                      Home
-                    </NavLink>
+                    <AnchorLink href="#home">Home</AnchorLink>
                     {/* <div uk-dropdown="true">
                                                 <ul className="uk-nav uk-dropdown-nav">
                                                     <li className={pathName === '/home-four' ? 'uk-active' : ''}>
@@ -182,9 +117,7 @@ function NavigationFour() {
                                             </div> */}
                   </li>
                   <li>
-                    <NavLink exact to="/about">
-                      About
-                    </NavLink>
+                    <AnchorLink href="#about">About</AnchorLink>
                   </li>
                   <li
                     className={
@@ -195,32 +128,7 @@ function NavigationFour() {
                         : ""
                     }
                   >
-                    <Link to="#">Services</Link>
-                    {/* <div uk-dropdown="true">
-                      <ul className="uk-nav uk-dropdown-nav">
-                        <li
-                          className={
-                            pathName === "/services" ? "uk-active" : ""
-                          }
-                        >
-                          <Link to="/services">Services One</Link>
-                        </li>
-                        <li
-                          className={
-                            pathName === "/services-two" ? "uk-active" : ""
-                          }
-                        >
-                          <Link to="/services-two">Services Two</Link>
-                        </li>
-                        <li
-                          className={
-                            pathName === "/service-details" ? "uk-active" : ""
-                          }
-                        >
-                          <Link to="/service-details">Single Services</Link>
-                        </li>
-                      </ul>
-                    </div> */}
+                    <AnchorLink href="#services">Services</AnchorLink>
                   </li>
                   <li
                     className={
@@ -230,59 +138,10 @@ function NavigationFour() {
                         : ""
                     }
                   >
-                    <Link to="#">Project</Link>
-                    {/* <div uk-dropdown="true">
-                      <ul className="uk-nav uk-dropdown-nav">
-                        <li
-                          className={
-                            pathName === "/projects" ? "uk-active" : ""
-                          }
-                        >
-                          <Link to="/projects">Project</Link>
-                        </li>
-                        <li
-                          className={
-                            pathName === "/project-details" ? "uk-active" : ""
-                          }
-                        >
-                          <Link to="/project-details">Single Project</Link>
-                        </li>
-                      </ul>
-                    </div> */}
+                    <AnchorLink href="#project">Project</AnchorLink>
                   </li>
-                  {/* <li
-                    className={pathName === "/testimonials" ? "uk-active" : ""}
-                  >
-                    <Link to="/testimonials">Testimonials</Link>
-                  </li> */}
-                  {/* <li className={pathName === "/team" ? "uk-active" : ""}>
-                    <Link to="/team">Team</Link>
-                  </li> */}
-                  {/* <li
-                    className={
-                      pathName === "/blog" || pathName === "/blog-details"
-                        ? "uk-active"
-                        : ""
-                    }
-                  >
-                    <Link to="#">Blog</Link>
-                    <div uk-dropdown="true">
-                      <ul className="uk-nav uk-dropdown-nav">
-                        <li className={pathName === "/blog" ? "uk-active" : ""}>
-                          <Link to="/blog">Blog</Link>
-                        </li>
-                        <li
-                          className={
-                            pathName === "/blog-details" ? "uk-active" : ""
-                          }
-                        >
-                          <Link to="/blog-details">Single Blog</Link>
-                        </li>
-                      </ul>
-                    </div>
-                  </li> */}
                   <li className={pathName === "/contact" ? "uk-active" : ""}>
-                    <Link to="/contact">Contact</Link>
+                    <AnchorLink href="#contact">Contact</AnchorLink>
                   </li>
                 </ul>
               </nav>

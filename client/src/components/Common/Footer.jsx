@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/images/logo2.png";
 import footerShapeOne from "../../assets/images/footer-shape1.png";
 import footerShapeTwo from "../../assets/images/footer-shape2.png";
 import GoTop from "./GoTop";
