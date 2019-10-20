@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import NavigationFour from "../Navigation/NavigationFour";
-import projectImg from "../../assets/images/project-details.jpg";
 import Footer from "../Common/Footer";
 import { connect } from "react-redux";
 import { acSetUrl } from "../../redux/Tools/actions";
@@ -50,7 +49,7 @@ class ProjectDetails extends React.Component {
           <div className="uk-container">
             <div className="uk-grid uk-flex project-details">
               <div className="project-details-img uk-width-expand">
-                <img src={project.img} alt="project" />
+                <img src={project.imgBig[0]} alt="project" />
               </div>
 
               <div className="item uk-width-1-5">
