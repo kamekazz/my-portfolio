@@ -10,8 +10,6 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import { connect } from "react-redux";
 
 function NavigationFour({ navState }) {
-  let pathName = window.location.pathname;
-  console.log("navState", navState);
   return (
     <React.Fragment>
       <div

@@ -15,6 +15,16 @@ import { acSetSection } from "../../redux/Tools/actions";
 class Home extends React.Component {
   addWayPoint = text => {
     this.props.acSetSection(text);
+
+    const listener = function(e) {
+      console.log("focused!"); // do anything here
+    };
+
+    // Add event listener
+    document.getElementById("coco").addEventListener("focus", listener);
+
+    // When you want to remove the event listener
+    document.getElementById("coco").removeEventListener("focus", listener);
   };
   render() {
     return (
