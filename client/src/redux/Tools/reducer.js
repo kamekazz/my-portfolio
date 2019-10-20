@@ -1,6 +1,7 @@
 const initialState = {
   loading: true,
-  serviceInput: ""
+  serviceInput: "",
+  section: ""
 };
 
 export default function(state = initialState, action) {
@@ -16,6 +17,11 @@ export default function(state = initialState, action) {
       return {
         ...state,
         serviceInput: payload
+      };
+    case "SET_SECTION":
+      return {
+        ...state,
+        section: payload
       };
     default:
       return state;

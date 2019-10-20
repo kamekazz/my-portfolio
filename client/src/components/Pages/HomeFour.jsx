@@ -8,26 +8,37 @@ import Project from "../HomeFour/Project";
 // import PartnerLogo from "../HomeFour/PartnerLogo";
 import Contact from "../Common/Contact";
 import Footer from "../Common/Footer";
+import { Waypoint } from "react-waypoint";
+import { connect } from "react-redux";
+import { acSetSection } from "../../redux/Tools/actions";
 
 class Home extends React.Component {
+  addWayPoint = text => {
+    this.props.acSetSection(text);
+  };
   render() {
     return (
       <React.Fragment>
         {/* Main Banner */}
+        <Waypoint onEnter={() => this.addWayPoint("home")} />
         <Banner />
+
         {/* Features Area */}
         <FeaturesTwo />
         {/* Vertical line */}
         <SeperatedBar />
         {/* About Area */}
+        <Waypoint onEnter={() => this.addWayPoint("about")} />
         <About Drake={true} />
         {/* Vertical line */}
         <SeperatedBar />
         {/* Services Area */}
+        <Waypoint onEnter={() => this.addWayPoint("services")} />
         <Services />
         {/* Vertical line */}
         <SeperatedBar />
         {/* Project Area */}
+        <Waypoint onEnter={() => this.addWayPoint("project")} />
         <Project />
         {/* Vertical line */}
         {/* <SeperatedBar /> */}
@@ -44,6 +55,7 @@ class Home extends React.Component {
         {/* Vertical line */}
         <SeperatedBar />
         {/* Contact Area */}
+        <Waypoint onEnter={() => this.addWayPoint("contact")} />
         <Contact />
         {/* Footer Area */}
         <Footer />
@@ -52,4 +64,11 @@ class Home extends React.Component {
   }
 }
 
-export default Home;
+const mapStateToProps = state => ({});
+
+const mapDispatchToProps = { acSetSection };
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Home);

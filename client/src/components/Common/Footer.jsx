@@ -70,17 +70,23 @@ class Footer extends React.Component {
                 </ul>
                 <ul className="social">
                   <li>
-                    <a href="https://www.facebook.com/manuel.taveras.5680?ref=bookmarks">
+                    <a
+                      href="https://www.facebook.com/manuel.taveras.5680?ref=bookmarks"
+                      target="_blank"
+                    >
                       <i className="flaticon-logo"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="https://github.com/kamekazz">
+                    <a href="https://github.com/kamekazz" target="_blank">
                       <i className="fab fa-github"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.linkedin.com/in/manuel-taveras-242ba9179/">
+                    <a
+                      href="https://www.linkedin.com/in/manuel-taveras-242ba9179/"
+                      target="_blank"
+                    >
                       <i className="flaticon-linkedin"></i>
                     </a>
                   </li>

@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ModalVideo from "react-modal-video";
 import "../../../node_modules/react-modal-video/scss/modal-video.scss";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 class Banner extends React.Component {
   state = {
@@ -28,9 +29,12 @@ class Banner extends React.Component {
                   offerings and work. I will be experienced and focussed to make
                   you happy!
                 </p>
-                <Link to="#" className="uk-button uk-button-default">
+                <AnchorLink
+                  href="#services"
+                  className="uk-button uk-button-default"
+                >
                   Get Started
-                </Link>
+                </AnchorLink>
 
                 <Link
                   onClick={e => {

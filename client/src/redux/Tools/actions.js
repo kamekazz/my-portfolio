@@ -5,3 +5,7 @@ export const acLoadingPage = value => dispatch => {
 export const acChangesService = value => dispatch => {
   dispatch({ type: "ADD_SERVICE", payload: value });
 };
+
+export const acSetSection = value => dispatch => {
+  dispatch({ type: "SET_SECTION", payload: value });
+};

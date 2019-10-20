@@ -11,9 +11,11 @@ const ButtonEl = styled(Fab)`
 
 function Signature() {
   return (
-    <ButtonEl variant="extended" color="secondary">
-      like what you see
-    </ButtonEl>
+    <a href="imgx\Manuel_Taveras_resume.pdf" target="_blank">
+      <ButtonEl variant="extended" color="secondary">
+        like what you see
+      </ButtonEl>
+    </a>
   );
 }
 

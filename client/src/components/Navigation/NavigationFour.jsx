@@ -5,12 +5,13 @@ import "../../assets/css/flaticon.css";
 import "../../assets/css/animate.min.css";
 import Logo from "../Logo/Logo";
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+// import { Link, NavLink } from "react-router-dom";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import { connect } from "react-redux";
 
-function NavigationFour() {
+function NavigationFour({ navState }) {
   let pathName = window.location.pathname;
-
+  console.log("navState", navState);
   return (
     <React.Fragment>
       <div
@@ -27,16 +28,7 @@ function NavigationFour() {
 
           <nav className="uk-navbar-container">
             <ul className="uk-navbar-nav">
-              <li
-                className={
-                  pathName === "/home-four" ||
-                  pathName === "/home-five" ||
-                  pathName === "/home-six" ||
-                  pathName === "/home-seven"
-                    ? "uk-active"
-                    : ""
-                }
-              >
+              <li className={navState === "home" ? "uk-active" : ""}>
                 <AnchorLink href="#home">Home</AnchorLink>
               </li>
               <li>
@@ -81,66 +73,19 @@ function NavigationFour() {
             <div className="navbar uk-navbar-right">
               <nav className="uk-navbar-container">
                 <ul className="uk-navbar-nav">
-                  <li>
+                  <li className={navState === "home" ? "uk-active" : ""}>
                     <AnchorLink href="#home">Home</AnchorLink>
-                    {/* <div uk-dropdown="true">
-                                                <ul className="uk-nav uk-dropdown-nav">
-                                                    <li className={pathName === '/home-four' ? 'uk-active' : ''}>
-                                                        <Link 
-                                                            to="/home-four"
-                                                        >
-                                                            Home Four
-                                                        </Link>
-                                                    </li>
-                                                    <li className={pathName === '/home-five' ? 'uk-active' : ''}>
-                                                        <Link 
-                                                            to="/home-five"
-                                                        >
-                                                            Home Five
-                                                        </Link>
-                                                    </li>
-                                                    <li className={pathName === '/home-six' ? 'uk-active' : ''}>
-                                                        <Link 
-                                                            to="/home-six"
-                                                        >
-                                                            Home Six
-                                                        </Link>
-                                                    </li>
-                                                    <li className={pathName === '/home-seven' ? 'uk-active' : ''}>
-                                                        <Link 
-                                                            to="/home-seven"
-                                                        >
-                                                            Home Seven
-                                                        </Link>
-                                                    </li>
-                                                </ul>
-                                            </div> */}
                   </li>
-                  <li>
+                  <li className={navState === "about" ? "uk-active" : ""}>
                     <AnchorLink href="#about">About</AnchorLink>
                   </li>
-                  <li
-                    className={
-                      pathName === "/services" ||
-                      pathName === "/services-two" ||
-                      pathName === "/service-details"
-                        ? "uk-active"
-                        : ""
-                    }
-                  >
+                  <li className={navState === "services" ? "uk-active" : ""}>
                     <AnchorLink href="#services">Services</AnchorLink>
                   </li>
-                  <li
-                    className={
-                      pathName === "/projects" ||
-                      pathName === "/project-details"
-                        ? "uk-active"
-                        : ""
-                    }
-                  >
+                  <li className={navState === "project" ? "uk-active" : ""}>
                     <AnchorLink href="#project">Project</AnchorLink>
                   </li>
-                  <li className={pathName === "/contact" ? "uk-active" : ""}>
+                  <li className={navState === "contact" ? "uk-active" : ""}>
                     <AnchorLink href="#contact">Contact</AnchorLink>
                   </li>
                 </ul>
@@ -153,4 +98,11 @@ function NavigationFour() {
   );
 }
 
-export default NavigationFour;
+const mapStateToProps = state => ({ navState: state.tools.section });
+
+const mapDispatchToProps = {};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(NavigationFour);

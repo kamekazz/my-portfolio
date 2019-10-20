@@ -114,7 +114,10 @@ class Contact extends React.Component {
                 <img id="mapone" src={mapImg} alt="map" />
 
                 <div className="location uk-location1">
-                  <a href="https://www.google.com/search?q=new+york&rlz=1C1CHBF_enUS841US841&sxsrf=ACYBGNQlXEIWs2gNCy1idVLFwvbq233lJQ:1571188640733&source=lnms&sa=X&ved=0ahUKEwiEgbnmzZ_lAhVCn-AKHY0YAqgQ_AUIDSgA&biw=1536&bih=792&dpr=1.25">
+                  <a
+                    target="_blank"
+                    href="https://www.google.com/search?q=new+york&rlz=1C1CHBF_enUS841US841&sxsrf=ACYBGNQlXEIWs2gNCy1idVLFwvbq233lJQ:1571188640733&source=lnms&sa=X&ved=0ahUKEwiEgbnmzZ_lAhVCn-AKHY0YAqgQ_AUIDSgA&biw=1536&bih=792&dpr=1.25"
+                  >
                     <div className="location-info">
                       <h5>New York</h5>
                       <span>United State</span>
@@ -123,7 +126,10 @@ class Contact extends React.Component {
                 </div>
 
                 <div className="location uk-location2">
-                  <a href="https://www.google.com/search?rlz=1C1CHBF_enUS841US841&biw=1536&bih=792&sxsrf=ACYBGNT9xGF8ARx6_WqFsHpLO7v3t_q0Mg%3A1571188645669&ei=pW-mXcmyKIKd5gLyiIiQCQ&q=dominican+republic+santiago&oq=do&gs_l=psy-ab.3.0.35i39l2j0i131i67j0i67l4j0i131j0l2.87021.87174..89065...0.4..0.68.133.2......0....1..gws-wiz.......0i71.j2GPvQ98EeI">
+                  <a
+                    target="_blank"
+                    href="https://www.google.com/search?rlz=1C1CHBF_enUS841US841&biw=1536&bih=792&sxsrf=ACYBGNT9xGF8ARx6_WqFsHpLO7v3t_q0Mg%3A1571188645669&ei=pW-mXcmyKIKd5gLyiIiQCQ&q=dominican+republic+santiago&oq=do&gs_l=psy-ab.3.0.35i39l2j0i131i67j0i67l4j0i131j0l2.87021.87174..89065...0.4..0.68.133.2......0....1..gws-wiz.......0i71.j2GPvQ98EeI"
+                  >
                     <div className="location-info">
                       <h5>Santiago</h5>
                       <span>Dominican Republic</span>
