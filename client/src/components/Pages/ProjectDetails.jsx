@@ -9,37 +9,24 @@ import { projects } from "../../assets/Data/Project";
 
 class ProjectDetails extends React.Component {
   state = {
+    live: 0,
     total: 0,
-    back: true,
-    live: 0
+    down: 0,
+    up: 0
   };
   componentDidMount() {
-    const numberLive = Number(this.props.match.params.id);
     this.props.acSetUrl(false);
-    this.setState({ total: projects.length });
-    this.setState({ live: numberLive });
-    this.checkFestProject();
+    this.setState({
+      total: projects.length - 1,
+      live: Number(this.props.match.params.id),
+      up: Number(this.props.match.params.id) + 1,
+      down: Number(this.props.match.params.id) - 1
+    });
   }
-  componentDidUpdate() {}
-  checkFestProject = () => {
-    if (this.props.match.params.id === 0) {
-      this.setState({ back: false });
-    }
-  };
-  render() {
-    const { total, live, back } = this.state;
-    const project = projects[this.props.match.params.id];
 
-    const checkLengthProject = () => {
-      let plus = live + 1;
-      if (true) {
-        return (
-          <Link to={`/project/${plus}`} className="uk-button uk-button-default">
-            Next Project
-          </Link>
-        );
-      }
-    };
+  render() {
+    const project = projects[this.props.match.params.id];
+    const { down, up, total, live } = this.state;
 
     return (
       <React.Fragment>
@@ -128,17 +115,27 @@ class ProjectDetails extends React.Component {
 
             <div className="project-next-and-prev">
               <div className="uk-grid uk-grid-match uk-grid-medium uk-child-width-1-2@m uk-child-width-1-2@s">
-                {back && (
-                  <div className="item">
-                    <Link
-                      to={`/project/${this.props.match.params.id - 1}`}
+                <div className="item">
+                  {live >= 1 && (
+                    <a
+                      href={`/project/${down}`}
                       className="uk-button uk-button-default"
                     >
                       Prev Project
-                    </Link>
-                  </div>
-                )}
-                <div className="item uk-text-right">{checkLengthProject()}</div>
+                    </a>
+                  )}
+                </div>
+
+                <div className="item uk-text-right">
+                  {live < total && (
+                    <a
+                      href={`/project/${up}`}
+                      className="uk-button uk-button-default"
+                    >
+                      Next Project
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           </div>
