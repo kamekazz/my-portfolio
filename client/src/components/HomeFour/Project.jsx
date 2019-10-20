@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import OwlCarousel from "react-owl-carousel3";
 
 import { projects } from "../../assets/Data/Project";
+import PartnerLogo from "./PartnerLogo";
 
 const options = {
   loop: true,
@@ -46,6 +47,7 @@ class Project extends React.Component {
             </Link> */}
           </div>
         </div>
+        <PartnerLogo />
 
         <OwlCarousel
           className="project-slides owl-carousel owl-theme"

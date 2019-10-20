@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "isomorphic-fetch";
 import mapImg from "../../assets/images/map2.png";
 import { connect } from "react-redux";
+import { acChangesService } from "../../redux/Tools/actions";
 
 class Contact extends React.Component {
   state = {
@@ -94,6 +95,8 @@ class Contact extends React.Component {
   };
 
   render() {
+    const { acChangesService } = this.props;
+
     return (
       <section
         id="contact"
@@ -172,6 +175,7 @@ class Contact extends React.Component {
 
                   <div className="item uk-margin">
                     <input
+                      onFocus={() => acChangesService("")}
                       type="text"
                       className="uk-input"
                       name="subject"
@@ -219,7 +223,7 @@ const mapStateToProps = state => ({
   rxServiceInput: state.tools.serviceInput
 });
 
-const mapDispatchToProps = {};
+const mapDispatchToProps = { acChangesService };
 
 export default connect(
   mapStateToProps,

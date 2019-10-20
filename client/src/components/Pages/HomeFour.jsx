@@ -5,7 +5,7 @@ import SeperatedBar from "../Common/SeperatedBar";
 import About from "../About/AboutContent";
 import Services from "../HomeFour/Services";
 import Project from "../HomeFour/Project";
-
+// import PartnerLogo from "../HomeFour/PartnerLogo";
 import Contact from "../Common/Contact";
 import Footer from "../Common/Footer";
 
