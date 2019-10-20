@@ -1,7 +1,8 @@
 const initialState = {
   loading: true,
   serviceInput: "",
-  section: ""
+  section: "",
+  url: true
 };
 
 export default function(state = initialState, action) {
@@ -22,6 +23,11 @@ export default function(state = initialState, action) {
       return {
         ...state,
         section: payload
+      };
+    case "SET_URL":
+      return {
+        ...state,
+        url: payload
       };
     default:
       return state;

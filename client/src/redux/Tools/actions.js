@@ -9,3 +9,6 @@ export const acChangesService = value => dispatch => {
 export const acSetSection = value => dispatch => {
   dispatch({ type: "SET_SECTION", payload: value });
 };
+export const acSetUrl = value => dispatch => {
+  dispatch({ type: "SET_URL", payload: value });
+};

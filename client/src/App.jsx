@@ -7,7 +7,7 @@ import Home from "./components/Pages/HomeFour";
 // import ServicesTwo from "./components/Pages/ServicesTwo";
 // import ServiceDetails from "./components/Pages/ServiceDetails";
 // import Project from "./components/Pages/Project";
-// import ProjectDetails from "./components/Pages/ProjectDetails";
+import ProjectDetails from "./components/Pages/ProjectDetails";
 // import BlogDetails from "./components/Pages/BlogDetails";
 // import Testimonials from "./components/Pages/Testimonials";
 // import Team from "./components/Pages/Team";
@@ -36,6 +36,12 @@ class App extends React.Component {
           <React.Fragment>
             {this.props.loading ? <Preloader /> : <NavigationFour />}
             <Route path="/" exact component={Home} />
+            <Route
+              path="/project-details/:id"
+              exact
+              component={ProjectDetails}
+            />
+            <Route component={ErrorPage} />
             {/* <Route path="/about" exact component={About} />
             <Route path="/services" exact component={Services} />
             <Route path="/services-two" exact component={ServicesTwo} />
@@ -47,7 +53,6 @@ class App extends React.Component {
             <Route path="/team" exact component={Team} />
             <Route path="/blog" exact component={Blog} />
             <Route path="/contact" exact component={Contact} /> */}
-            <Route component={ErrorPage} />
           </React.Fragment>
         </Router>
       </>

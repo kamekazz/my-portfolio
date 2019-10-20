@@ -10,9 +10,12 @@ import Contact from "../Common/Contact";
 import Footer from "../Common/Footer";
 import { Waypoint } from "react-waypoint";
 import { connect } from "react-redux";
-import { acSetSection } from "../../redux/Tools/actions";
+import { acSetSection, acSetUrl } from "../../redux/Tools/actions";
 
 class Home extends React.Component {
+  componentDidMount() {
+    this.props.acSetUrl(true);
+  }
   addWayPoint = text => {
     this.props.acSetSection(text);
 
@@ -76,7 +79,7 @@ class Home extends React.Component {
 
 const mapStateToProps = state => ({});
 
-const mapDispatchToProps = { acSetSection };
+const mapDispatchToProps = { acSetSection, acSetUrl };
 
 export default connect(
   mapStateToProps,
