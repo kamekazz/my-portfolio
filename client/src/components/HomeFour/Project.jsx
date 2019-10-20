@@ -53,9 +53,9 @@ class Project extends React.Component {
           className="project-slides owl-carousel owl-theme"
           {...options}
         >
-          {projects.map(project => (
+          {projects.map((project, index) => (
             <div key={project.img} className="single-project">
-              <Link to="#" className="project-img">
+              <Link to={`/project/${index}`} className="project-img">
                 <img
                   src={project.img}
                   alt="Project"
@@ -66,7 +66,7 @@ class Project extends React.Component {
 
               <div className="project-content">
                 <h3>
-                  <Link to="#">{project.title}</Link>
+                  <Link to={`/project/${index}`}>{project.title}</Link>
                 </h3>
                 <ul>
                   <li>

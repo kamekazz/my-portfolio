@@ -1,5 +1,7 @@
 export const projects = [
   {
+    customer: "",
+    category: [""],
     title: "FioBook",
     img:
       "https://res.cloudinary.com/dujqdfwzi/image/upload/c_scale,h_250/v1571181631/fio.png",
@@ -7,9 +9,15 @@ export const projects = [
     description:
       "Is the Dominican Republic most of the people use credit and pay once a month so I created this PWA app to help small business manage account instead of writing everything in aNotebook . To use and demo this app please use this password: 123456 and user account name: TAVERAS78@GMAIL.COM .",
     tec: ["node.js", "angular", "material-ui", "bootstrap", "mongodb", "PWA"],
-    lick: [{ icon: "", link: "" }]
+    lick: [{ icon: "", link: "" }],
+    demo: "",
+    demoName: "",
+    date: "12/30/2019"
   },
   {
+    customer: "Agora Mall, Santo Dominingo",
+    category: [""],
+
     title: "Viva la Musica",
     img:
       "https://res.cloudinary.com/dujqdfwzi/image/upload/c_scale,h_250/v1571181631/viva.png",
@@ -17,9 +25,29 @@ export const projects = [
     description:
       "I created this app for a mall It gives the ability of every guess to add music to a playlist And be able to vote for the next song, This is not the original app I changed a couple things to be suitable for the web .To demo this app please use this password: demo and user account name: demo.",
     tec: ["node.js", "angular", "material-ui", "mongodb", "React JS"],
-    lick: [{ icon: "", link: "" }]
+    lick: [
+      {
+        icon: "fab fa-trello",
+        link: "https://trello.com/b/mSDIHXA9/viva-la-musica"
+      },
+      {
+        icon: "fab fa-github",
+        link: "https://github.com/kamekazz/viva-cli"
+      },
+      {
+        icon: "fab fa-github-square",
+        link: "https://github.com/kamekazz/viva-la-musica-api"
+      }
+    ],
+    demo: "https://viva-la-musica.firebaseapp.com/",
+    demoName: "viva-la-musica.firebaseapp.com",
+    date: "1/30/2017",
+    blockquote: ""
   },
   {
+    customer: "",
+    category: [""],
+
     title: "Ez-wms",
     img:
       "https://res.cloudinary.com/dujqdfwzi/image/upload/c_scale,h_250/v1571181631/ez.png",
@@ -27,9 +55,14 @@ export const projects = [
     description:
       "Is the Dominican Republic most of the people use credit and pay once a month so I created this PWA app to help small business manage account instead of writing everything in aNotebook . To use and demo this app please use this password: 123456 and user account name: TAVERAS78@GMAIL.COM .",
     tec: ["node.js", "angular", "material-ui", "bootstrap", "mongodb", "PWA"],
-    lick: [{ icon: "", link: "" }]
+    lick: [{ icon: "", link: "" }],
+    demo: "",
+    demoName: "",
+    date: "12/30/2019"
   },
   {
+    customer: "N/A",
+    category: ["clothing "],
     title: "Ropa Vieja",
     img:
       "https://res.cloudinary.com/dujqdfwzi/image/upload/v1571182168/ropa.png",
@@ -37,6 +70,9 @@ export const projects = [
     description:
       "Is the Dominican Republic most of the people use credit and pay once a month so I created this PWA app to help small business manage account instead of writing everything in aNotebook . To use and demo this app please use this password: 123456 and user account name: TAVERAS78@GMAIL.COM .",
     tec: ["node.js", "angular", "material-ui", "bootstrap", "mongodb", "PWA"],
-    lick: [{ icon: "", link: "" }]
+    lick: [{ icon: "", link: "" }],
+    demo: "https://ropa-vieja-4.herokuapp.com/",
+    demoName: "ropa-vieja-4.herokuapp.com",
+    date: "12/30/2019"
   }
 ];

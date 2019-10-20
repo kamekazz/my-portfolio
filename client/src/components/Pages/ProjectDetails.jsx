@@ -5,12 +5,42 @@ import projectImg from "../../assets/images/project-details.jpg";
 import Footer from "../Common/Footer";
 import { connect } from "react-redux";
 import { acSetUrl } from "../../redux/Tools/actions";
+import { projects } from "../../assets/Data/Project";
 
 class ProjectDetails extends React.Component {
+  state = {
+    total: 0,
+    back: true,
+    live: 0
+  };
   componentDidMount() {
+    const numberLive = Number(this.props.match.params.id);
     this.props.acSetUrl(false);
+    this.setState({ total: projects.length });
+    this.setState({ live: numberLive });
+    this.checkFestProject();
   }
+  componentDidUpdate() {}
+  checkFestProject = () => {
+    if (this.props.match.params.id === 0) {
+      this.setState({ back: false });
+    }
+  };
   render() {
+    const { total, live, back } = this.state;
+    const project = projects[this.props.match.params.id];
+
+    const checkLengthProject = () => {
+      let plus = live + 1;
+      if (true) {
+        return (
+          <Link to={`/project/${plus}`} className="uk-button uk-button-default">
+            Next Project
+          </Link>
+        );
+      }
+    };
+
     return (
       <React.Fragment>
         <NavigationFour />
@@ -33,55 +63,53 @@ class ProjectDetails extends React.Component {
           <div className="uk-container">
             <div className="uk-grid uk-flex project-details">
               <div className="project-details-img uk-width-expand">
-                <img src={projectImg} alt="project" />
+                <img src={project.img} alt="project" />
               </div>
 
               <div className="item uk-width-1-5">
                 <div className="project-details-info">
                   <ul>
                     <li>
-                      <span>Customer Name:</span> Steven John
+                      <span>Customer Name:</span>
+                      {project.customer}
                     </li>
                     <li>
-                      <span>Category:</span> Art & Design
+                      <span>Category:</span>{" "}
+                      {project.category.map(cate => cate)}
                     </li>
                     <li>
-                      <span>Date:</span> 04/11/2019
+                      <span>Date:</span>
+                      {project.date}
                     </li>
                     <li>
                       <span>Status:</span> In Process
                     </li>
                     <li>
-                      <span>Demo Link:</span> <Link to="#">www.gunter.com</Link>
+                      <span>Demo Link:</span>{" "}
+                      <a href={project.demo} target="_blank">
+                        www.{project.demoName}
+                      </a>
                     </li>
                     <li>
-                      <span>Tags:</span> <Link to="#">Art</Link>,{" "}
-                      <Link to="#">Design</Link>
+                      <span>Tags:</span>
+                      {project.tec.map(tag => (
+                        <>
+                          <Link to="#">{tag}</Link>
+                          {"   "}
+                        </>
+                      ))}
                     </li>
                     <li>
-                      <span>Share:</span>
+                      <span>Resources:</span>
 
                       <ul>
-                        <li>
-                          <Link to="#">
-                            <i className="flaticon-logo"></i>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="#">
-                            <i className="flaticon-twitter"></i>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="#">
-                            <i className="flaticon-logo-1"></i>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="#">
-                            <i className="flaticon-linkedin"></i>
-                          </Link>
-                        </li>
+                        {project.lick.map(x => (
+                          <li style={{ marginRight: "3px" }}>
+                            <a href={x.link} target="_blank">
+                              <i className={x.icon}></i>
+                            </a>
+                          </li>
+                        ))}
                       </ul>
                     </li>
                   </ul>
@@ -90,60 +118,27 @@ class ProjectDetails extends React.Component {
             </div>
 
             <div className="project-details-desc">
-              <h3>Development</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis noexercit ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in
-                reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt Lorem ipsum dolor sit amet,
-                consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                noexercit ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt.
-              </p>
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
 
               <blockquote className="blockquote">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis noexercit ullamco laboris nisi
-                  ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                  reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                  nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt Lorem ipsum dolor
-                  sit amet.
-                </p>
+                <p>{project.blockquote}</p>
               </blockquote>
-
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis noexercit ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in
-                reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-              </p>
             </div>
 
             <div className="project-next-and-prev">
               <div className="uk-grid uk-grid-match uk-grid-medium uk-child-width-1-2@m uk-child-width-1-2@s">
-                <div className="item">
-                  <Link to="#" className="uk-button uk-button-default">
-                    Prev Project
-                  </Link>
-                </div>
-
-                <div className="item uk-text-right">
-                  <Link to="#" className="uk-button uk-button-default">
-                    Next Project
-                  </Link>
-                </div>
+                {back && (
+                  <div className="item">
+                    <Link
+                      to={`/project/${this.props.match.params.id - 1}`}
+                      className="uk-button uk-button-default"
+                    >
+                      Prev Project
+                    </Link>
+                  </div>
+                )}
+                <div className="item uk-text-right">{checkLengthProject()}</div>
               </div>
             </div>
           </div>

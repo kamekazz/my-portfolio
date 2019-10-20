@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Preloader from "./components/Common/Preloader";
 import Home from "./components/Pages/HomeFour";
 // import About from "./components/Pages/About";
@@ -36,12 +36,8 @@ class App extends React.Component {
           <React.Fragment>
             {this.props.loading ? <Preloader /> : <NavigationFour />}
             <Route path="/" exact component={Home} />
-            <Route
-              path="/project-details/:id"
-              exact
-              component={ProjectDetails}
-            />
-            <Route component={ErrorPage} />
+            <Route path="/project/:id" exact component={ProjectDetails} />
+
             {/* <Route path="/about" exact component={About} />
             <Route path="/services" exact component={Services} />
             <Route path="/services-two" exact component={ServicesTwo} />
@@ -52,7 +48,7 @@ class App extends React.Component {
             <Route path="/testimonials" exact component={Testimonials} />
             <Route path="/team" exact component={Team} />
             <Route path="/blog" exact component={Blog} />
-            <Route path="/contact" exact component={Contact} /> */}
+          <Route path="/contact" exact component={Contact} /> */}
           </React.Fragment>
         </Router>
       </>
