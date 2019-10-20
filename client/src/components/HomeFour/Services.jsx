@@ -1,8 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { acChangesService } from "../../redux/Tools/actions";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 class Services extends React.Component {
   render() {
+    const { acChangesService } = this.props;
     return (
       <section
         id="services"
@@ -15,8 +19,14 @@ class Services extends React.Component {
             <div className="bar"></div>
           </div>
 
-          <div className="uk-grid uk-grid-match uk-grid-medium uk-child-width-1-3@m uk-child-width-1-2@s">
-            <div className="item">
+          <AnchorLink
+            href="#contact"
+            className="uk-grid uk-grid-match uk-grid-medium uk-child-width-1-3@m uk-child-width-1-2@s"
+          >
+            <div
+              onClick={() => acChangesService("Custom CMD")}
+              className="item"
+            >
               <div className="single-services">
                 <div className="icon">
                   <i className="flaticon-plan"></i>
@@ -29,7 +39,10 @@ class Services extends React.Component {
               </div>
             </div>
 
-            <div className="item">
+            <div
+              onClick={() => acChangesService("UX & UI Design")}
+              className="item"
+            >
               <div className="single-services ">
                 <div className="icon">
                   <i className="flaticon-ux-design"></i>
@@ -42,7 +55,7 @@ class Services extends React.Component {
               </div>
             </div>
 
-            <div className="item">
+            <div onClick={() => acChangesService("Database")} className="item">
               <div className="single-services">
                 <div className="icon">
                   <i className="flaticon-data"></i>
@@ -55,7 +68,10 @@ class Services extends React.Component {
               </div>
             </div>
 
-            <div className="item">
+            <div
+              onClick={() => acChangesService("Management")}
+              className="item"
+            >
               <div className="single-services">
                 <div className="icon">
                   <i className="flaticon-project"></i>
@@ -68,7 +84,10 @@ class Services extends React.Component {
               </div>
             </div>
 
-            <div className="item">
+            <div
+              onClick={() => acChangesService("Creative Solutions")}
+              className="item"
+            >
               <div className="single-services">
                 <div className="icon">
                   <i className="flaticon-think"></i>
@@ -81,7 +100,10 @@ class Services extends React.Component {
               </div>
             </div>
 
-            <div className="item">
+            <div
+              onClick={() => acChangesService("Custom Restful API")}
+              className="item"
+            >
               <div className="single-services">
                 <div className="icon">
                   <i className="flaticon-shout"></i>
@@ -94,7 +116,10 @@ class Services extends React.Component {
               </div>
             </div>
 
-            <div className="item">
+            <div
+              onClick={() => acChangesService("Data Virtualization")}
+              className="item"
+            >
               <div className="single-services">
                 <div className="icon">
                   <i className="flaticon-analytics-1"></i>
@@ -107,7 +132,10 @@ class Services extends React.Component {
               </div>
             </div>
 
-            <div className="item">
+            <div
+              onClick={() => acChangesService("Single Page Application")}
+              className="item"
+            >
               <div className="single-services">
                 <div className="icon">
                   <i className="flaticon-camera"></i>
@@ -120,7 +148,10 @@ class Services extends React.Component {
               </div>
             </div>
 
-            <div className="item">
+            <div
+              onClick={() => acChangesService("Mern Stack")}
+              className="item"
+            >
               <div className="single-services">
                 <div className="icon">
                   <i className="flaticon-chat"></i>
@@ -132,11 +163,18 @@ class Services extends React.Component {
                 <Link to="#" className="link uk-position-cover"></Link>
               </div>
             </div>
-          </div>
+          </AnchorLink>
         </div>
       </section>
     );
   }
 }
 
-export default Services;
+const mapStateToProps = state => ({});
+
+const mapDispatchToProps = { acChangesService };
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Services);

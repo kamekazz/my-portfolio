@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "isomorphic-fetch";
 import mapImg from "../../assets/images/map2.png";
+import { connect } from "react-redux";
 
 class Contact extends React.Component {
   state = {
@@ -176,7 +177,11 @@ class Contact extends React.Component {
                       name="subject"
                       id="subject"
                       placeholder="Subject"
-                      value={this.state.formFields.subject}
+                      value={
+                        this.props.rxServiceInput
+                          ? this.props.rxServiceInput
+                          : this.state.formFields.subject
+                      }
                       onChange={this.subjectChangeHandler}
                       required={true}
                     />
@@ -210,4 +215,13 @@ class Contact extends React.Component {
   }
 }
 
-export default Contact;
+const mapStateToProps = state => ({
+  rxServiceInput: state.tools.serviceInput
+});
+
+const mapDispatchToProps = {};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Contact);

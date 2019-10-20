@@ -1,5 +1,6 @@
 const initialState = {
-  loading: true
+  loading: true,
+  serviceInput: ""
 };
 
 export default function(state = initialState, action) {
@@ -10,6 +11,11 @@ export default function(state = initialState, action) {
       return {
         ...state,
         loading: payload
+      };
+    case "ADD_SERVICE":
+      return {
+        ...state,
+        serviceInput: payload
       };
     default:
       return state;
